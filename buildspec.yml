@@ -3,9 +3,6 @@ version: 0.2
 env:
   variables:
     JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
-  parameter-store:
-    LOGIN_PASSWORD: "dockerLoginPassword"
-
 phases:
   install:
     commands:
@@ -16,7 +13,6 @@ phases:
   pre_build:
     commands:
       - echo Entered the pre_build phase...
-      - docker login –u User –p $LOGIN_PASSWORD
     finally:
       - echo This always runs even if the login command fails 
   build:
@@ -30,6 +26,8 @@ phases:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
+      - ls
+      - taskcat -c <TaskCat>/ci/taskcat.yml
 artifacts:
   files:
     - target/messageUtil-1.0.jar
