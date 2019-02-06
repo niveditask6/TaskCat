@@ -22,6 +22,7 @@ phases:
       - pwd
       - ls
       - taskcat -c sample-taskcat-project/ci/taskcat-autobucket.yml.jinja
+      - pwd
       - cd sample-taskcat-project/templates
       - ls
       
