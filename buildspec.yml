@@ -21,6 +21,8 @@ phases:
       - echo Build started on `date`
       - pwd
       - ls
+      - cd sample-taskcat-project/templates
+      - ls
       - taskcat -c sample-taskcat-project/ci/taskcat-autobucket.yml.jinja
     finally:
       - echo This always runs even if the install command fails
