@@ -1,6 +1,6 @@
 global:
 	owner:nivedita.k@brillio.com
-	qsname:TaskCat
+	qsname:sample-taskcat-project
 	regions:
 	-us-east-1
 	reporting:true
