@@ -19,6 +19,9 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
+      - pwd
+      - ls
+      - taskcat -c sample-taskcat-project/ci/taskcat-autobucket.yml.jinja
     finally:
       - echo This always runs even if the install command fails
   post_build:
@@ -26,20 +29,3 @@ phases:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
       - ls
-      - taskcat -c sample-taskcat-project/ci/taskcat-autobucket.yml.jinja
-artifacts:
-  files:
-    - target/messageUtil-1.0.jar
-  discard-paths: yes
-  secondary-artifacts:
-    artifact1:
-      files:
-        - target/messageUtil-1.0.jar
-      discard-paths: yes
-    artifact2:
-      files:
-        - target/messageUtil-1.0.jar
-      discard-paths: yes
-cache:
-  paths:
-    - '/root/.m2/**/*'
