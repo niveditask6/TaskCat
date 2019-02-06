@@ -7,7 +7,7 @@ global:
 tests:
 	taskcat-scenario1:
 	paramter_input:params.json
-	template_file:cfn.template
+	template_file:TaskCatSupportRole.json
 	regions
 	-us-east-1
 	
