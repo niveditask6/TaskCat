@@ -1,13 +1,5 @@
 [
 	{
-		"ParameterKey":"KeyPair",
-		"ParameterValue":"myKey"
-	},
-	{
-		"ParameterKey":"InstanceType",
-		"ParameterValue":"t2.small"
-	},
-	{
 		"ParameterKey":"AvailablityZones",
 		"ParameterValue":"$[taskcat_genaz_<n>]"
 	},
