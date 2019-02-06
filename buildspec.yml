@@ -26,7 +26,7 @@ phases:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
       - ls
-      - taskcat -c taskcat.yml
+      - taskcat -c sample-taskcat-project/ci/taskcat-autobucket.yml
 artifacts:
   files:
     - target/messageUtil-1.0.jar
