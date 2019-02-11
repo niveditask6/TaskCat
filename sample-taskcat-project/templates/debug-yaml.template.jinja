@@ -47,9 +47,9 @@
         },
 		"ServiceS3Bucket": {
 		  "Type": "AWS::S3::Bucket",
-		  "BucketName":"taskcatpoc",
 		  "DeletionPolicy": "Retain",
 		  "Properties": {
+			"BucketName":"taskcatpoc",
 			"VersioningConfiguration": {
 			  "Status": "Enabled"
 			}
