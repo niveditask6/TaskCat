@@ -31,6 +31,11 @@ phases:
       - ls
       - echo "list of files:";
       - ls;
+      - for filename in /taskcat_outputs/*.txt; do
+      - for ((i=0; i<=3; i++)); do
+      - ./MyProgram.exe "$filename" "Logs/$(basename "$filename" .txt)_Log$i.txt"
+      - done
+      - done
   pre_build: 
     commands: 
       - "echo Entered the pre_build phase..."
