@@ -29,12 +29,10 @@ phases:
       - ls
       - "cd taskcat_outputs"
       - ls
-      - echo "list of files:";
+      - "echo \"list of files:\";"
       - ls;
-      - for filename in /taskcat_outputs/*; do
-      - echo "$(basename "$file")"
-      - "vi "$file""
-      - done
+      - "for filename in /taskcat_outputs/*; do"
+      - "echo \"$(basename \"$file\")\" done"
   pre_build: 
     commands: 
       - "echo Entered the pre_build phase..."
