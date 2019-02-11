@@ -32,9 +32,7 @@ phases:
       - "echo \"list of files:\";"
       - ls;
       - "for filename in *;"
-      - 
-        ? "do echo \"file"
-        : "${filename}\";"
+      - ? "do echo \"file" : "${filename}\";"
       - "echo \"reading...\""
       - "exec<${filename}"
       - value=0
