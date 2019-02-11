@@ -44,6 +44,16 @@
                     }
                 }]
             }
-        }
+        },
+		"ServiceS3Bucket": {
+		  "Type": "AWS::S3::Bucket",
+		  "BucketName":"taskcatpoc",
+		  "DeletionPolicy": "Retain",
+		  "Properties": {
+			"VersioningConfiguration": {
+			  "Status": "Enabled"
+			}
+		  }
+		}
     }
 }
