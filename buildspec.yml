@@ -28,6 +28,7 @@ phases:
       - pwd
       - ls
       - "cd taskcat_outputs"
+      - ls
   pre_build: 
     commands: 
       - "echo Entered the pre_build phase..."
