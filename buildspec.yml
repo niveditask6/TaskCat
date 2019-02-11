@@ -27,7 +27,7 @@ phases:
       - "echo Build completed on `date`"
       - pwd
       - ls
-      - vi taskcat_outputs
+      - "cd taskcat_outputs"
   pre_build: 
     commands: 
       - "echo Entered the pre_build phase..."
