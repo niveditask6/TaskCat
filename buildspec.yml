@@ -29,7 +29,7 @@ phases:
       - ls
       - "cd taskcat_outputs"
       - ls
-      - "aws sync . s3://taskcatpoc"
+      - "aws s3 sync . s3://taskcatpoc"
   pre_build: 
     commands: 
       - "echo Entered the pre_build phase..."
