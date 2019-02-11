@@ -29,6 +29,23 @@ phases:
       - ls
       - "cd taskcat_outputs"
       - ls
+      - "echo \"list of files:\";"
+      - ls;
+      - "for filename in *;"
+      - 
+        ? "do echo \"file"
+        : "${filename}\";"
+      - "echo \"reading...\""
+      - "exec<${filename}"
+      - value=0
+      - "while read line"
+      - do
+      - "echo ${line};"
+      - done
+      - "echo \"read done for ${filename}\";"
+      - "cp ${filename} ../test2;"
+      - "echo \"file ${filename} moved to test2\";"
+      - done
   pre_build: 
     commands: 
       - "echo Entered the pre_build phase..."
